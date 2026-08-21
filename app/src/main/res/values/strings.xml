@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">MediGo</string>
+    <string name="app_tagline">Your health, delivered.</string>
+
+    <string name="title_login">Sign In</string>
+    <string name="title_register">Create Account</string>
+    <string name="title_otp">Verify Phone</string>
+    <string name="title_home">MediGo</string>
+    <string name="title_cart">My Cart</string>
+    <string name="title_checkout">Checkout</string>
+    <string name="title_order_tracking">Order Tracking</string>
+    <string name="title_prescription_upload">Upload Prescription</string>
+    <string name="title_book_diagnostic">Book Diagnostic</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_search">Search Medicines</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_categories">Browse</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_profile">Profile</string>
+
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone">Phone number (07XXXXXXXX)</string>
+    <string name="hint_address">Delivery address</string>
+    <string name="hint_secondary_address">Secondary address (optional)</string>
+    <string name="hint_otp">Enter 6-digit OTP</string>
+    <string name="hint_special_instructions">Special instructions (optional)</string>
+
+    <string name="btn_login">Sign In</string>
+    <string name="btn_register">Create Account</string>
+    <string name="btn_verify">Verify OTP</string>
+    <string name="btn_resend_otp">Resend OTP</string>
+    <string name="btn_add_to_cart">Add to Cart</string>
+    <string name="btn_checkout">Proceed to Checkout</string>
+    <string name="btn_place_order">Place Order</string>
+    <string name="btn_confirm_booking">Confirm Booking</string>
+    <string name="btn_upload_prescription">Upload Prescription</string>
+    <string name="btn_choose_gallery">Choose from Gallery</string>
+    <string name="btn_take_photo">Take a Photo</string>
+    <string name="btn_save_changes">Save Changes</string>
+    <string name="btn_select_date">Select Date</string>
+    <string name="btn_select_time">Select Time</string>
+
+    <string name="tv_no_account">Don\'t have an account? <b>Register</b></string>
+    <string name="tv_have_account">Already have an account? <b>Sign In</b></string>
+    <string name="tv_forgot_password">Forgot password?</string>
+
+    <string name="label_welcome">Hi, %1$s</string>
+    <string name="label_featured">Featured Products</string>
+    <string name="label_categories">Categories</string>
+    <string name="label_all_products">All Products</string>
+    <string name="label_order_summary">Order Summary</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_delivery_fee">Delivery Fee</string>
+    <string name="label_total">Total</string>
+    <string name="label_payment_method">Payment Method</string>
+    <string name="label_cash_on_delivery">Cash on Delivery</string>
+    <string name="label_card_payment">Card Payment</string>
+    <string name="label_free">FREE</string>
+    <string name="label_order_id">Order #%1$s</string>
+    <string name="label_sent_to">OTP sent to %1$s</string>
+    <string name="label_resend_in">Resend in %1$ds</string>
+    <string name="label_delivery_location">Delivery Location</string>
+    <string name="label_general_diagnostic">General Diagnostic Test</string>
+    <string name="label_booking_mode">Booking Mode</string>
+    <string name="label_home_visit">Professional Home Visit</string>
+    <string name="label_self_test_kit">Self-Test Kit Delivery</string>
+    <string name="label_requires_prescription">Requires Prescription</string>
+    <string name="label_stock">Stock</string>
+    <string name="label_description">Description</string>
+    <string name="label_usage_guidelines">Usage Guidelines</string>
+    <string name="label_search_placeholder">Search medicines, tests, kits…</string>
+    <string name="label_no_results">No results found for your search.</string>
+    <string name="label_empty_cart">Your cart is empty.\nBrowse medicines to get started.</string>
+    <string name="label_empty_orders">You have no orders yet.\nStart shopping!</string>
+    <string name="label_empty_notifications">No notifications yet.</string>
+    <string name="label_featured_medicines">Featured Medicines</string>
+
+    <string name="price_format">Rs. %.2f</string>
+
+    <string name="status_pending">Pending</string>
+    <string name="status_confirmed">Confirmed</string>
+    <string name="status_processing">Processing</string>
+    <string name="status_out_for_delivery">Out for Delivery</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_in_stock">In Stock</string>
+    <string name="status_out_of_stock">Out of Stock</string>
+
+    <string name="status_detail_pending">Your order has been received and is being reviewed.</string>
+    <string name="status_detail_confirmed">Your order has been confirmed and is being prepared.</string>
+    <string name="status_detail_processing">Your order is being packed and prepared for dispatch.</string>
+    <string name="status_detail_out_for_delivery">Your order is on the way! Track it on the map.</string>
+    <string name="status_detail_delivered">Your order has been delivered. Thank you!</string>
+    <string name="status_detail_cancelled">Your order has been cancelled.</string>
+
+    <string name="dialog_logout_title">Sign Out</string>
+    <string name="dialog_logout_message">Are you sure you want to sign out?</string>
+    <string name="action_logout">Sign Out</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="msg_added_to_cart">Added to cart successfully!</string>
+    <string name="msg_reset_email_sent">Password reset email sent. Check your inbox.</string>
+    <string name="msg_prescription_uploaded">Prescription uploaded successfully!</string>
+    <string name="msg_booking_confirmed">Booking confirmed! We will contact you shortly.</string>
+    <string name="msg_profile_updated">Profile updated successfully!</string>
+    <string name="msg_camera_coming_soon">Camera feature coming soon.</string>
+
+    <string name="error_email_required">Please enter your email address.</string>
+    <string name="error_password_required">Please enter your password.</string>
+    <string name="error_password_short">Password must be at least 6 characters.</string>
+    <string name="error_passwords_no_match">Passwords do not match.</string>
+    <string name="error_name_required">Please enter your full name.</string>
+    <string name="error_phone_invalid">Please enter a valid phone number.</string>
+    <string name="error_address_required">Please enter a delivery address.</string>
+    <string name="error_date_required">Please select a date.</string>
+    <string name="error_time_required">Please select a time.</string>
+    <string name="error_login_failed">Incorrect email or password. Please try again.</string>
+    <string name="error_register_failed">Registration failed. Please try again.</string>
+    <string name="error_user_not_found">User account not found.</string>
+    <string name="error_save_failed">Failed to save data. Please try again.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_product_not_found">Product not found.</string>
+    <string name="error_add_to_cart">Failed to add to cart.</string>
+    <string name="error_order_failed">Failed to place order. Please try again.</string>
+    <string name="error_booking_failed">Failed to confirm booking. Please try again.</string>
+    <string name="error_upload_failed">Upload failed. Please check your connection.</string>
+    <string name="error_otp_failed">Failed to send OTP. Please try again.</string>
+    <string name="error_otp_invalid">Please enter a valid 6-digit OTP.</string>
+    <string name="error_otp_not_sent">OTP not sent yet. Please wait.</string>
+    <string name="error_otp_incorrect">Incorrect OTP. Please try again.</string>
+    <string name="error_permission_denied">Permission denied. Cannot access images.</string>
+    <string name="error_reset_failed">Failed to send reset email. Please try again.</string>
+    <string name="error_no_image_selected">Please select an image first.</string>
+
+    <string name="cd_app_logo">MediGo Logo</string>
+    <string name="cd_medicine_image">Medicine image</string>
+    <string name="cd_category_icon">Category icon</string>
+    <string name="cd_profile_picture">Profile picture</string>
+
+</resources>

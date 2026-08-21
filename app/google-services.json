@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "119697118376",
+    "firebase_url": "https://medigo-429d2-default-rtdb.firebaseio.com",
+    "project_id": "medigo-429d2",
+    "storage_bucket": "medigo-429d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119697118376:android:b01d0b216490ed169a1e9d",
+        "android_client_info": {
+          "package_name": "com.styro.medigo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBstDANrAYuLu2nH95yBu0v2Pvu-xbtfsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119697118376:android:9f06e5c1a5266e029a1e9d",
+        "android_client_info": {
+          "package_name": "com.styro.medigo1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBstDANrAYuLu2nH95yBu0v2Pvu-xbtfsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/orderDetailRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/medigo_background">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp" android:background="@color/medigo_primary">
+            <ImageButton android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_back" app:tint="@android:color/white" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Order Detail" android:textColor="@android:color/white" android:textSize="18sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+            <TextView android:id="@+id/tvOrderId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order #" android:textColor="@color/medigo_primary" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+
+            <TextView android:id="@+id/tvCurrentStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PENDING" android:textColor="@color/medigo_accent" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delivery Address" android:textColor="@color/medigo_text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvDeliveryAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/medigo_text_primary" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Method" android:textColor="@color/medigo_text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvPaymentMethod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="@color/medigo_text_primary" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Amount" android:textColor="@color/medigo_text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvTotalAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs. 0.00" android:textColor="@color/medigo_accent" android:textSize="20sp" android:textStyle="bold" android:layout_marginBottom="24dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update Status" android:textColor="@color/medigo_text_primary" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+
+            <Spinner android:id="@+id/spinnerStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:background="@drawable/bg_input_field" android:padding="12dp"/>
+
+            <Button android:id="@+id/btnUpdateStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="@color/medigo_primary" android:text="Update Status" android:textColor="@android:color/white"/>
+
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="16dp" android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

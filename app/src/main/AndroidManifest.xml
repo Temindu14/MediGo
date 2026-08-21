@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MediGo"
+        android:usesCleartextTraffic="false">
+
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_notification" />
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/medigo_primary" />
+
+                <!-- PayHere Activity -->
+                <activity
+                    android:name="lk.payhere.androidsdk.PHMainActivity"
+                    android:exported="false" />
+
+        <!-- Splash -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Auth -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+                <activity
+                    android:name=".activity.OTPVerificationActivity"
+                    android:exported="false"
+                    android:screenOrientation="portrait" />
+
+            <activity
+                android:name=".activity.PhoneVerificationActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+            <!-- Main -->
+            <activity
+                android:name=".activity.MainActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+            <!-- Product -->
+            <activity
+                android:name=".activity.ProductDetailsActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+        <!-- Search -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!-- Cart & Checkout -->
+            <activity
+                android:name=".activity.CartActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+            <activity
+                android:name=".activity.CheckoutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OrderSuccessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Orders -->
+            <activity
+                android:name=".activity.OrderTrackingActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+        <!-- Prescription -->
+        <activity
+            android:name=".activity.PrescriptionUploadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Diagnostic -->
+        <activity
+            android:name=".activity.DiagnosticBookingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Reports -->
+        <activity
+            android:name=".activity.ReportsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Profile -->
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Notifications -->
+        <activity
+            android:name=".activity.NotificationsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Admin -->
+        <activity
+            android:name=".activity.AdminStaffActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+                <activity
+                    android:name=".activity.AdminManagerActivity"
+                    android:exported="false"
+                    android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.AdminMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RegisterAdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+            <activity
+                android:name=".activity.ManageMedicinesActivity"
+                android:exported="false"
+                android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AddEditMedicineActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.ManageOrdersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+                <activity
+                    android:name=".activity.OrderDetailActivity"
+                    android:exported="false"
+                    android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ManageOutletsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.MapPickerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <service
+            android:name=".util.MediGoFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD5_tn-4AezSPK491p2sSQCvobUmU3B95Y" />
+
+    </application>
+
+</manifest>

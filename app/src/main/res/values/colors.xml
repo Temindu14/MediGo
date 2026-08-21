@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="medigo_primary">#1B6CA8</color>
+    <color name="medigo_primary_dark">#154F7A</color>
+    <color name="medigo_primary_light">#4A90D9</color>
+    <color name="medigo_secondary">#29B6B6</color>
+    <color name="medigo_secondary_dark">#1E8A8A</color>
+    <color name="medigo_accent">#FF7043</color>
+
+    <!-- Background colors -->
+    <color name="medigo_background">#F5F7FA</color>
+    <color name="medigo_surface">#FFFFFF</color>
+    <color name="medigo_card">#FFFFFF</color>
+
+    <!-- Text colors -->
+    <color name="medigo_text_primary">#1A1A2E</color>
+    <color name="medigo_text_secondary">#6B7280</color>
+    <color name="medigo_text_hint">#9CA3AF</color>
+    <color name="medigo_text_on_primary">#FFFFFF</color>
+
+    <!-- Status colors -->
+    <color name="medigo_success">#4CAF50</color>
+    <color name="medigo_warning">#FF9800</color>
+    <color name="medigo_error">#F44336</color>
+    <color name="medigo_info">#2196F3</color>
+
+    <!-- Divider and border -->
+    <color name="medigo_divider">#E5E7EB</color>
+    <color name="medigo_border">#D1D5DB</color>
+
+    <!-- Bottom nav -->
+    <color name="medigo_nav_selected">#1B6CA8</color>
+    <color name="medigo_nav_unselected">#9CA3AF</color>
+
+    <!-- Legacy / compat -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="red_error">#F44336</color>
+    <color name="blue_info">#2196F3</color>
+
+    <!-- Extra colors referenced by layouts -->
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+    <color name="background_primary">#F5F7FA</color>
+    <color name="background_secondary">#FFFFFF</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="green_success">#4CAF50</color>
+    <color name="orange_warning">#FF9800</color>
+</resources>
