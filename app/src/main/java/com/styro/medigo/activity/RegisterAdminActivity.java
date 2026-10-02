@@ -82,7 +82,6 @@ public class RegisterAdminActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         progressBar = findViewById(R.id.progressBar);
 
-        // Set title based on who's registering
         if (Constants.ROLE_MAIN_ADMIN.equals(allowedRole)) {
             tvTitle.setText("Register Main Admin");
         } else if (Constants.ROLE_OUTLET_MANAGER.equals(allowedRole)) {
@@ -91,7 +90,6 @@ public class RegisterAdminActivity extends AppCompatActivity {
             tvTitle.setText("Register Outlet Staff");
         }
 
-        // Back button
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
     }
 
@@ -99,7 +97,6 @@ public class RegisterAdminActivity extends AppCompatActivity {
         roleLabels = new ArrayList<>();
         roleValues = new ArrayList<>();
 
-        // Determine which roles can be created based on allowedRole
         String currentRole = sessionManager.getUserRole();
 
         if (Constants.ROLE_MAIN_ADMIN.equals(currentRole)) {
@@ -162,7 +159,6 @@ public class RegisterAdminActivity extends AppCompatActivity {
         String selectedRole = roleValues.get(selectedIndex);
         showLoading(true);
 
-        // Save current admin's auth state before creating new user
         FirebaseAuth tempAuth = FirebaseAuth.getInstance();
         String currentAdminEmail = sessionManager.getUserEmail();
         String currentAdminId = sessionManager.getUserId();

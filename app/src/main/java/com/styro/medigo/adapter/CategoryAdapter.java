@@ -57,7 +57,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
                 .override(100)
                 .into(holder.ivCategoryIcon);
 
-        // Highlight selected category
         boolean isSelected = position == selectedPosition;
         holder.itemView.setSelected(isSelected);
 

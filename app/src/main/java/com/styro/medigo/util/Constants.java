@@ -2,7 +2,6 @@ package com.styro.medigo.util;
 
 public class Constants {
 
-    // Firebase database node names
     public static final String NODE_USERS = "users";
     public static final String NODE_MEDICINES = "medicines";
     public static final String NODE_CATEGORIES = "categories";
@@ -11,12 +10,10 @@ public class Constants {
     public static final String NODE_OUTLETS = "outlets";
     public static final String NODE_NOTIFICATIONS = "notifications";
 
-    // Firebase storage paths
     public static final String STORAGE_PRESCRIPTIONS = "prescriptions/";
     public static final String STORAGE_MEDICINES = "medicines/";
     public static final String STORAGE_PROFILES = "profiles/";
 
-    // Intent keys
     public static final String KEY_MEDICINE_ID = "medicine_id";
     public static final String KEY_CATEGORY_NAME = "category_name";
     public static final String KEY_ORDER_ID = "order_id";
@@ -26,7 +23,6 @@ public class Constants {
 
     public static final String KEY_CATEGORY_ID = "category_id";
 
-    // SharedPreferences keys
     public static final String PREF_NAME = "medigo_prefs";
     public static final String PREF_USER_ID = "user_id";
     public static final String PREF_USER_NAME = "user_name";
@@ -37,27 +33,22 @@ public class Constants {
     public static final String PREF_IS_LOGGED_IN = "is_logged_in";
     public static final String PREF_FCM_TOKEN = "fcm_token";
 
-    // User roles
     public static final String ROLE_CUSTOMER = "customer";
     public static final String ROLE_OUTLET_STAFF = "outlet_staff";
     public static final String ROLE_OUTLET_MANAGER = "outlet_manager";
     public static final String ROLE_MAIN_ADMIN = "main_admin";
 
-    // Payment methods
     public static final String PAYMENT_CASH_ON_DELIVERY = "cash_on_delivery";
     public static final String PAYMENT_CARD = "card";
 
-    // Product types
     public static final String TYPE_MEDICINE = "medicine";
     public static final String TYPE_TEST_KIT = "test_kit";
     public static final String TYPE_DIAGNOSTIC = "diagnostic";
 
-    // Notification channels
     public static final String CHANNEL_ORDERS = "orders_channel";
     public static final String CHANNEL_PROMOTIONS = "promotions_channel";
     public static final String CHANNEL_GENERAL = "general_channel";
 
-    // Delivery fee
     public static final double DELIVERY_FEE = 150.00;
     public static final double FREE_DELIVERY_THRESHOLD = 2000.00;
 

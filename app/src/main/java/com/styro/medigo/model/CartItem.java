@@ -12,7 +12,6 @@ public class CartItem {
     private String prescriptionPath;
 
     public CartItem() {
-        // Default constructor
     }
 
     public CartItem(String medicineId, String medicineName, String medicineImageUrl,

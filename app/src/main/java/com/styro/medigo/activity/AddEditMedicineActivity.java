@@ -33,8 +33,12 @@ public class AddEditMedicineActivity extends AppCompatActivity {
     private Button btnSave;
     private ProgressBar progressBar;
 
+
     private DatabaseReference databaseReference;
     private String medicineId;
+
+    private String existingImageUrl = "";
+    private String existingType = "medicine";
     private boolean isEditMode = false;
 
     @Override
@@ -96,6 +100,8 @@ public class AddEditMedicineActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
                         Medicine medicine = snapshot.getValue(Medicine.class);
                         if (medicine != null) {
+                            existingImageUrl = medicine.getImageUrl();
+                            existingType = medicine.getType() != null ? medicine.getType() : "medicine";
                             etName.setText(medicine.getName());
                             etBrand.setText(medicine.getBrand());
                             etCategory.setText(medicine.getCategory());
@@ -127,6 +133,7 @@ public class AddEditMedicineActivity extends AppCompatActivity {
         String description = etDescription.getText().toString().trim();
         String usageGuidelines = etUsageGuidelines.getText().toString().trim();
 
+
         if (TextUtils.isEmpty(name)) { etName.setError("Required"); etName.requestFocus(); return; }
         if (TextUtils.isEmpty(brand)) { etBrand.setError("Required"); etBrand.requestFocus(); return; }
         if (TextUtils.isEmpty(category)) { etCategory.setError("Required"); etCategory.requestFocus(); return; }
@@ -148,6 +155,8 @@ public class AddEditMedicineActivity extends AppCompatActivity {
         medicine.setFeatured(cbFeatured.isChecked());
         medicine.setAvailable(cbAvailable.isChecked());
         medicine.setOutletId("outlet001");
+        medicine.setImageUrl(existingImageUrl);
+        medicine.setType(existingType);
         medicine.setUpdatedAt(System.currentTimeMillis());
 
         progressBar.setVisibility(View.VISIBLE);

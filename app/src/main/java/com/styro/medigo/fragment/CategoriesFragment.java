@@ -112,7 +112,6 @@ public class CategoriesFragment extends Fragment implements MedicineAdapter.OnMe
 
                     @Override
                     public void onCancelled(DatabaseError error) {
-                        // Silently handle error
                     }
 
                 });

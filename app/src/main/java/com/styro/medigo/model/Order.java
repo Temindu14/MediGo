@@ -13,7 +13,7 @@ public class Order {
     private double totalAmount;
     private String deliveryAddress;
     private String paymentMethod;
-    private String transactionId;   // PayHere transaction ID (empty string for COD)
+    private String transactionId;
     private String status;
     private String prescriptionUrl;
     private double deliveryLatitude;
@@ -24,7 +24,6 @@ public class Order {
 
 
 
-    // Order status constants
     public static final String STATUS_PENDING          = "pending";
     public static final String STATUS_CONFIRMED        = "confirmed";
     public static final String STATUS_PROCESSING       = "processing";
@@ -33,7 +32,6 @@ public class Order {
     public static final String STATUS_CANCELLED        = "cancelled";
 
     public Order() {
-        // Required empty constructor for Firebase
     }
 
     public Order(String orderId, String userId, String outletId, List<CartItem> items,

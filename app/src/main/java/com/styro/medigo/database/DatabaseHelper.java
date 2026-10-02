@@ -16,7 +16,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "medigo.db";
     private static final int DATABASE_VERSION = 1;
 
-    // Cart table
     private static final String TABLE_CART = "cart";
     private static final String COL_ID = "id";
     private static final String COL_MEDICINE_ID = "medicine_id";
@@ -55,11 +54,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    // Add item to cart or update quantity if it already exists
     public long addToCart(CartItem item) {
         SQLiteDatabase db = getWritableDatabase();
 
-        // Check if item already exists in cart
         Cursor cursor = db.query(
                 TABLE_CART,
                 new String[]{COL_ID, COL_QUANTITY},
@@ -69,7 +66,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
 
         if (cursor.moveToFirst()) {
-            // Update existing item quantity
             int existingId = cursor.getInt(cursor.getColumnIndexOrThrow(COL_ID));
             int existingQuantity = cursor.getInt(cursor.getColumnIndexOrThrow(COL_QUANTITY));
             cursor.close();
@@ -83,7 +79,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor.close();
 
-        // Insert new item
         ContentValues values = new ContentValues();
         values.put(COL_MEDICINE_ID, item.getMedicineId());
         values.put(COL_MEDICINE_NAME, item.getMedicineName());

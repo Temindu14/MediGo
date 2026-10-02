@@ -14,7 +14,6 @@ public class Outlet {
     private String managerId;
 
     public Outlet() {
-        // Required empty constructor for Firebase
     }
 
     public Outlet(String outletId, String name, String address, String phone,

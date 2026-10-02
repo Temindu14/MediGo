@@ -37,7 +37,7 @@
                     android:name="lk.payhere.androidsdk.PHMainActivity"
                     android:exported="false" />
 
-        <!-- Splash -->
+        <!-- SPLASHSCREEN -->
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true"
@@ -48,7 +48,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Auth -->
+        <!-- AUTHENTICATION -->
         <activity
             android:name=".activity.LoginActivity"
             android:exported="false"
@@ -69,26 +69,26 @@
                 android:exported="false"
                 android:screenOrientation="portrait" />
 
-            <!-- Main -->
+            <!-- MAIN -->
             <activity
                 android:name=".activity.MainActivity"
                 android:exported="false"
                 android:screenOrientation="portrait" />
 
-            <!-- Product -->
+            <!-- PRODUCTS -->
             <activity
                 android:name=".activity.ProductDetailsActivity"
                 android:exported="false"
                 android:screenOrientation="portrait" />
 
-        <!-- Search -->
+        <!-- SEACH -->
         <activity
             android:name=".activity.SearchActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible" />
 
-        <!-- Cart & Checkout -->
+        <!-- CARTS AND ACTIVITY -->
             <activity
                 android:name=".activity.CartActivity"
                 android:exported="false"
@@ -104,43 +104,43 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Orders -->
+        <!-- ORDERS -->
             <activity
                 android:name=".activity.OrderTrackingActivity"
                 android:exported="false"
                 android:screenOrientation="portrait" />
 
-        <!-- Prescription -->
+        <!-- PRESCRIPTION -->
         <activity
             android:name=".activity.PrescriptionUploadActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Diagnostic -->
+        <!-- DIAGNOSTICS -->
         <activity
             android:name=".activity.DiagnosticBookingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Reports -->
+        <!-- REPORTS -->
         <activity
             android:name=".activity.ReportsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Profile -->
+        <!-- PROFILE -->
         <activity
             android:name=".activity.ProfileActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Notifications -->
+        <!-- NOTIFICATIONS -->
         <activity
             android:name=".activity.NotificationsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Admin -->
+        <!-- ADMIN -->
         <activity
             android:name=".activity.AdminStaffActivity"
             android:exported="false"

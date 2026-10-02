@@ -109,7 +109,6 @@ public class OTPVerificationActivity extends AppCompatActivity {
 
                     @Override
                     public void onVerificationCompleted(PhoneAuthCredential credential) {
-                        // Auto-retrieval or instant verification
                         showLoading(false);
                         signInWithCredential(credential);
                     }

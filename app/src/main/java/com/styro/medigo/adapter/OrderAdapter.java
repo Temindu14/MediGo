@@ -45,7 +45,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
         Order order = orderList.get(position);
 
-        // Short order ID for display
         String shortId = order.getOrderId().substring(0, 8).toUpperCase();
         holder.tvOrderId.setText(context.getString(R.string.label_order_id, shortId));
 
@@ -53,7 +52,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         holder.tvOrderAmount.setText(context.getString(R.string.price_format, order.getTotalAmount()));
         holder.tvOrderStatus.setText(formatStatus(order.getStatus()));
 
-        // Color code the status
         int statusColor = getStatusColor(order.getStatus());
         holder.tvOrderStatus.setTextColor(statusColor);
 

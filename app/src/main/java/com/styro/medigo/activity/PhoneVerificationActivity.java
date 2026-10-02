@@ -39,8 +39,7 @@ public class PhoneVerificationActivity extends AppCompatActivity {
     private boolean fromRegister;
 
     private CountDownTimer countDownTimer;
-    private static final long RESEND_TIMEOUT = 60000; // 60 seconds
-
+    private static final long RESEND_TIMEOUT = 60000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +78,6 @@ public class PhoneVerificationActivity extends AppCompatActivity {
 
                     @Override
                     public void onVerificationCompleted(PhoneAuthCredential credential) {
-                        // Auto-verification (rare on real devices) — sign in immediately
                         signInWithCredential(credential);
                     }
 
@@ -131,8 +129,6 @@ public class PhoneVerificationActivity extends AppCompatActivity {
     }
 
     private void signInWithCredential(PhoneAuthCredential credential) {
-        // We don't sign in with phone — we just use OTP to verify the number.
-        // The user is already signed in via email. Just proceed on success.
         firebaseAuth.getCurrentUser()
                 .linkWithCredential(credential)
                 .addOnCompleteListener(task -> {
@@ -141,12 +137,9 @@ public class PhoneVerificationActivity extends AppCompatActivity {
                         Toast.makeText(this, "Phone verified successfully!", Toast.LENGTH_SHORT).show();
                         goToMain();
                     } else {
-                        // If linking fails (phone already linked to another account),
-                        // just proceed — phone format was valid enough
                         String msg = task.getException() != null
                                 ? task.getException().getMessage() : "";
                         if (msg != null && msg.contains("already")) {
-                            // Phone number already used — still let them through
                             Toast.makeText(this, "Phone verified!", Toast.LENGTH_SHORT).show();
                             goToMain();
                         } else {

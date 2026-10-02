@@ -25,7 +25,6 @@ public class MediGoFirebaseMessagingService extends FirebaseMessagingService {
     public void onNewToken(@NonNull String token) {
         super.onNewToken(token);
 
-        // Save the refreshed token locally
         SessionManager sessionManager = new SessionManager(this);
         sessionManager.setFcmToken(token);
     }
@@ -34,7 +33,6 @@ public class MediGoFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
-        // Create notification channels for Android O and above
         createNotificationChannels();
 
         String title = "MediGo";

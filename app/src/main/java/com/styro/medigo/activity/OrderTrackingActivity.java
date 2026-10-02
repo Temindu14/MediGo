@@ -50,10 +50,8 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
 
     private static final String TAG = "OrderTracking";
 
-    // MediHealth Colombo outlet location
     private static final LatLng OUTLET_LOCATION = new LatLng(6.9271, 79.8612);
 
-    // Your Google Maps API key (same one in AndroidManifest.xml)
     private static final String MAPS_API_KEY = "AIzaSyD5_tn-4AezSPK491p2sSQCvobUmU3B95Y";
 
     private TextView tvOrderId;
@@ -162,25 +160,19 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
         tvPaymentMethod.setText(formatPaymentMethod(order.getPaymentMethod()));
         updateStatusDisplay(order.getStatus());
 
-        // Draw map once map is ready and we have coordinates
         if (googleMap != null) {
             drawMapMarkers(order);
         }
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // MAP — draw outlet pin, delivery pin, and route between them
-    // ─────────────────────────────────────────────────────────────────────────
     private void drawMapMarkers(Order order) {
         googleMap.clear();
 
-        // Always show outlet pin
         googleMap.addMarker(new MarkerOptions()
                 .position(OUTLET_LOCATION)
                 .title("MediHealth Colombo Outlet")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
-        // If customer picked a location on map, show their pin and draw route
         if (order.getDeliveryLatitude() != 0 && order.getDeliveryLongitude() != 0) {
             LatLng deliveryLocation = new LatLng(
                     order.getDeliveryLatitude(),
@@ -191,25 +183,19 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
                     .title("Your Delivery Location")
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
-            // Zoom to show both pins
             LatLngBounds bounds = new LatLngBounds.Builder()
                     .include(OUTLET_LOCATION)
                     .include(deliveryLocation)
                     .build();
             googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 150));
 
-            // Fetch and draw route
             fetchRoute(OUTLET_LOCATION, deliveryLocation);
 
         } else {
-            // No delivery location — just show outlet
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(OUTLET_LOCATION, 14f));
         }
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // FETCH ROUTE from Google Directions API
-    // ─────────────────────────────────────────────────────────────────────────
     private void fetchRoute(LatLng origin, LatLng destination) {
         String url = "https://maps.googleapis.com/maps/api/directions/json?"
                 + "origin=" + origin.latitude + "," + origin.longitude
@@ -249,13 +235,12 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
                 googleMap.addPolyline(new PolylineOptions()
                         .addAll(points)
                         .width(10f)
-                        .color(Color.parseColor("#C0392B")) // MediGo red
+                        .color(Color.parseColor("#C0392B"))
                         .geodesic(true));
             }
         }
     }
 
-    // Parse the encoded polyline from the Directions API response
     private List<LatLng> parseDirectionsResponse(String json) {
         List<LatLng> points = new ArrayList<>();
         try {
@@ -274,7 +259,6 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
         return points;
     }
 
-    // Google's polyline encoding algorithm decoder
     private List<LatLng> decodePolyline(String encoded) {
         List<LatLng> poly = new ArrayList<>();
         int index = 0, len = encoded.length();
@@ -304,9 +288,6 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
         return poly;
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // STATUS DISPLAY
-    // ─────────────────────────────────────────────────────────────────────────
     private void updateStatusDisplay(String status) {
         String displayStatus;
         String detailMessage;
@@ -363,13 +344,11 @@ public class OrderTrackingActivity extends AppCompatActivity implements OnMapRea
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
-        // Show outlet by default
         googleMap.addMarker(new MarkerOptions()
                 .position(OUTLET_LOCATION)
                 .title("MediHealth Colombo Outlet"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(OUTLET_LOCATION, 14f));
 
-        // If order data already loaded, draw markers now
         if (currentOrder != null) {
             drawMapMarkers(currentOrder);
         }

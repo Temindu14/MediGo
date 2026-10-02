@@ -20,7 +20,6 @@ public class Medicine {
     private long updatedAt;
 
     public Medicine() {
-        // Required empty constructor for Firebase
     }
 
     public Medicine(String medicineId, String name, String category, double price) {

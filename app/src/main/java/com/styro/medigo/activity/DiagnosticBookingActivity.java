@@ -50,7 +50,6 @@ public class DiagnosticBookingActivity extends AppCompatActivity {
 
 
 
-    // Launches MapPickerActivity and handles the result
     private final ActivityResultLauncher<Intent> mapPickerLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
                 if (result.getResultCode() == RESULT_OK && result.getData() != null) {
@@ -182,7 +181,6 @@ public class DiagnosticBookingActivity extends AppCompatActivity {
         );
         booking.setSpecialInstructions(specialInstructions);
 
-        // Save lat/lng if user picked from map
         if (selectedLat != 0.0 && selectedLng != 0.0) {
             booking.setLatitude(selectedLat);
             booking.setLongitude(selectedLng);

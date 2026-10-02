@@ -15,7 +15,6 @@ public class User {
     private long createdAt;
 
     public User() {
-        // Required empty constructor for Firebase
     }
 
     public User(String userId, String name, String email, String phone) {
